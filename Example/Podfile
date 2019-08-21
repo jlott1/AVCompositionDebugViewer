@@ -1,0 +1,12 @@
+
+target 'AVCompositionDebugVieweriOS' do
+  use_frameworks!
+  platform :ios, '9.0'
+  pod 'AVCompositionDebugViewer', :path => '../'
+end
+
+target 'AVCompositionDebugViewerMac' do
+  use_frameworks!
+  platform :osx, '10.10'
+  pod 'AVCompositionDebugViewer', :path => '../'
+end

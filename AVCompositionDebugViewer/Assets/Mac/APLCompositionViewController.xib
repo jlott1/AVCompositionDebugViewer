@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSViewController">
+            <connections>
+                <outlet property="compositionDebugView" destination="Xkj-JD-nW7" id="eMg-Uf-jUC"/>
+                <outlet property="playerView" destination="44c-9g-2hW" id="Y5I-SU-7jZ"/>
+                <outlet property="view" destination="Mxi-Ds-BgW" id="j6f-Rg-adz"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="Mxi-Ds-BgW">
+            <rect key="frame" x="0.0" y="0.0" width="975" height="659"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <avPlayerView translatesAutoresizingMaskIntoConstraints="NO" id="44c-9g-2hW" customClass="APLPlayerView">
+                    <rect key="frame" x="0.0" y="236" width="975" height="423"/>
+                </avPlayerView>
+                <view horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-JD-nW7" customClass="APLCompositionDebugView">
+                    <rect key="frame" x="0.0" y="0.0" width="975" height="236"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Xkj-JD-nW7" firstAttribute="top" secondItem="44c-9g-2hW" secondAttribute="bottom" id="8YM-FB-Qcl"/>
+                <constraint firstItem="Xkj-JD-nW7" firstAttribute="leading" secondItem="Mxi-Ds-BgW" secondAttribute="leading" id="Jnz-OX-qJ0"/>
+                <constraint firstItem="44c-9g-2hW" firstAttribute="top" secondItem="Mxi-Ds-BgW" secondAttribute="top" id="Ytf-l5-orx"/>
+                <constraint firstItem="Xkj-JD-nW7" firstAttribute="top" secondItem="Mxi-Ds-BgW" secondAttribute="top" priority="999" constant="423" id="ZhT-ch-Pjg"/>
+                <constraint firstItem="Xkj-JD-nW7" firstAttribute="trailing" secondItem="Mxi-Ds-BgW" secondAttribute="trailing" id="clO-74-Z9S"/>
+                <constraint firstItem="44c-9g-2hW" firstAttribute="leading" secondItem="Mxi-Ds-BgW" secondAttribute="leading" id="jee-nr-2On"/>
+                <constraint firstItem="Xkj-JD-nW7" firstAttribute="bottom" secondItem="Mxi-Ds-BgW" secondAttribute="bottom" id="kLu-Wu-gUs"/>
+                <constraint firstAttribute="trailing" secondItem="44c-9g-2hW" secondAttribute="trailing" id="oak-RT-meY"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

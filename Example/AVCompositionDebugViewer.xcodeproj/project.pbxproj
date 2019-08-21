@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47BBA787020CD125FFC0EBB2 /* Pods_AVCompositionDebugVieweriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907ED880718AD619EB41959D /* Pods_AVCompositionDebugVieweriOS.framework */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* APLAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* APLViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		96DC1DC75FE8364BAD4B33CC /* Pods_AVCompositionDebugViewerMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C22D4521D0BDC6C4CE00A4 /* Pods_AVCompositionDebugViewerMac.framework */; };
+		E8572293230C3ED000A6ACDD /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8572292230C3ED000A6ACDD /* APLAppDelegate.m */; };
+		E8572295230C3ED100A6ACDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8572294230C3ED100A6ACDD /* Assets.xcassets */; };
+		E8572298230C3ED100A6ACDD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8572296230C3ED100A6ACDD /* MainMenu.xib */; };
+		E857229B230C3ED100A6ACDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E857229A230C3ED100A6ACDD /* main.m */; };
+		E85722A4230C3F4D00A6ACDD /* APLSimpleEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = E85722A2230C3F4D00A6ACDD /* APLSimpleEditor.m */; };
+		E85722B0230C406800A6ACDD /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = E85722AF230C406800A6ACDD /* SharedResources */; };
+		E85722B1230C406800A6ACDD /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = E85722AF230C406800A6ACDD /* SharedResources */; };
+		E85B7061230C459900413E66 /* APLSimpleEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B705F230C459900413E66 /* APLSimpleEditor.m */; };
+		E85B7064230C464100413E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85B7063230C464100413E66 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01AAAB09AF4A1A3C99703B76 /* Pods-AVCompositionDebugViewer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewer_Tests.release.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewer_Tests/Pods-AVCompositionDebugViewer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1FDF40EBDF865F1F9A60376A /* Pods-AVCompositionDebugViewer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewer_Example.debug.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewer_Example/Pods-AVCompositionDebugViewer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2B7165C1F0FA1B09E8EC56AE /* Pods-AVCompositionDebugViewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewer_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewer_Tests/Pods-AVCompositionDebugViewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		48C22D4521D0BDC6C4CE00A4 /* Pods_AVCompositionDebugViewerMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCompositionDebugViewerMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA97B8DE7BD121E41BBD798 /* Pods-AVCompositionDebugViewer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewer_Example.release.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewer_Example/Pods-AVCompositionDebugViewer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* AVCompositionDebugVieweriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCompositionDebugVieweriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* AVCompositionDebugVieweriOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVCompositionDebugVieweriOS-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* AVCompositionDebugVieweriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVCompositionDebugVieweriOS-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* APLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* APLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* APLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* APLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66FF7564EDE15D7B16243EEF /* Pods-AVCompositionDebugVieweriOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugVieweriOS.debug.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugVieweriOS/Pods-AVCompositionDebugVieweriOS.debug.xcconfig"; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		907ED880718AD619EB41959D /* Pods_AVCompositionDebugVieweriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCompositionDebugVieweriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABEB5F04106CB697EBC1863 /* Pods-AVCompositionDebugViewerMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewerMac.debug.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewerMac/Pods-AVCompositionDebugViewerMac.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F48BDFF944695FE0D620CA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C786A7A1C15B4C01F17E892E /* Pods-AVCompositionDebugVieweriOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugVieweriOS.release.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugVieweriOS/Pods-AVCompositionDebugVieweriOS.release.xcconfig"; sourceTree = "<group>"; };
+		C9A9DB3A2D1DF12B4A24C25A /* AVCompositionDebugViewer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AVCompositionDebugViewer.podspec; path = ../AVCompositionDebugViewer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CACA8E5909795DC21E005116 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DB4546AF363365FED4F23E6D /* Pods-AVCompositionDebugViewerMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVCompositionDebugViewerMac.release.xcconfig"; path = "Target Support Files/Pods-AVCompositionDebugViewerMac/Pods-AVCompositionDebugViewerMac.release.xcconfig"; sourceTree = "<group>"; };
+		E857228F230C3ED000A6ACDD /* AVCompositionDebugViewerMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCompositionDebugViewerMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8572291230C3ED000A6ACDD /* APLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		E8572292230C3ED000A6ACDD /* APLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		E8572294230C3ED100A6ACDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8572297230C3ED100A6ACDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E8572299230C3ED100A6ACDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E857229A230C3ED100A6ACDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E857229C230C3ED100A6ACDD /* AVCompositionDebugViewerMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AVCompositionDebugViewerMac.entitlements; sourceTree = "<group>"; };
+		E85722A0230C3F4D00A6ACDD /* APLSimpleEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLSimpleEditor.h; sourceTree = "<group>"; };
+		E85722A2230C3F4D00A6ACDD /* APLSimpleEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLSimpleEditor.m; sourceTree = "<group>"; };
+		E85722AF230C406800A6ACDD /* SharedResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SharedResources; sourceTree = "<group>"; };
+		E85B705D230C459900413E66 /* APLSimpleEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLSimpleEditor.h; sourceTree = "<group>"; };
+		E85B705F230C459900413E66 /* APLSimpleEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLSimpleEditor.m; sourceTree = "<group>"; };
+		E85B7063230C464100413E66 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F17CD57631C87677A30BD200 /* Pods_AVCompositionDebugViewer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVCompositionDebugViewer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				47BBA787020CD125FFC0EBB2 /* Pods_AVCompositionDebugVieweriOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E857228C230C3ED000A6ACDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DC1DC75FE8364BAD4B33CC /* Pods_AVCompositionDebugViewerMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EA0BA13F307937A0952FF63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FDF40EBDF865F1F9A60376A /* Pods-AVCompositionDebugViewer_Example.debug.xcconfig */,
+				5FA97B8DE7BD121E41BBD798 /* Pods-AVCompositionDebugViewer_Example.release.xcconfig */,
+				2B7165C1F0FA1B09E8EC56AE /* Pods-AVCompositionDebugViewer_Tests.debug.xcconfig */,
+				01AAAB09AF4A1A3C99703B76 /* Pods-AVCompositionDebugViewer_Tests.release.xcconfig */,
+				9ABEB5F04106CB697EBC1863 /* Pods-AVCompositionDebugViewerMac.debug.xcconfig */,
+				DB4546AF363365FED4F23E6D /* Pods-AVCompositionDebugViewerMac.release.xcconfig */,
+				66FF7564EDE15D7B16243EEF /* Pods-AVCompositionDebugVieweriOS.debug.xcconfig */,
+				C786A7A1C15B4C01F17E892E /* Pods-AVCompositionDebugVieweriOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* AVCompositionDebugVieweriOS */,
+				E8572290230C3ED000A6ACDD /* AVCompositionDebugViewerMac */,
+				E85722AF230C406800A6ACDD /* SharedResources */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				5EA0BA13F307937A0952FF63 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* AVCompositionDebugVieweriOS.app */,
+				E857228F230C3ED000A6ACDD /* AVCompositionDebugViewerMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				F17CD57631C87677A30BD200 /* Pods_AVCompositionDebugViewer_Tests.framework */,
+				48C22D4521D0BDC6C4CE00A4 /* Pods_AVCompositionDebugViewerMac.framework */,
+				907ED880718AD619EB41959D /* Pods_AVCompositionDebugVieweriOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* AVCompositionDebugVieweriOS */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* APLAppDelegate.h */,
+				6003F59D195388D20070C39A /* APLAppDelegate.m */,
+				6003F5A5195388D20070C39A /* APLViewController.h */,
+				6003F5A6195388D20070C39A /* APLViewController.m */,
+				E85B705D230C459900413E66 /* APLSimpleEditor.h */,
+				E85B705F230C459900413E66 /* APLSimpleEditor.m */,
+				E85B7063230C464100413E66 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			path = AVCompositionDebugVieweriOS;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* AVCompositionDebugVieweriOS-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* AVCompositionDebugVieweriOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				C9A9DB3A2D1DF12B4A24C25A /* AVCompositionDebugViewer.podspec */,
+				A9F48BDFF944695FE0D620CA /* README.md */,
+				CACA8E5909795DC21E005116 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E8572290230C3ED000A6ACDD /* AVCompositionDebugViewerMac */ = {
+			isa = PBXGroup;
+			children = (
+				E8572291230C3ED000A6ACDD /* APLAppDelegate.h */,
+				E8572292230C3ED000A6ACDD /* APLAppDelegate.m */,
+				E85722A0230C3F4D00A6ACDD /* APLSimpleEditor.h */,
+				E85722A2230C3F4D00A6ACDD /* APLSimpleEditor.m */,
+				E8572294230C3ED100A6ACDD /* Assets.xcassets */,
+				E8572296230C3ED100A6ACDD /* MainMenu.xib */,
+				E8572299230C3ED100A6ACDD /* Info.plist */,
+				E857229A230C3ED100A6ACDD /* main.m */,
+				E857229C230C3ED100A6ACDD /* AVCompositionDebugViewerMac.entitlements */,
+			);
+			path = AVCompositionDebugViewerMac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* AVCompositionDebugVieweriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "AVCompositionDebugVieweriOS" */;
+			buildPhases = (
+				C101A87259F500A8FB03E00F /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				B6621CA18D0CBA0DB0F0783F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVCompositionDebugVieweriOS;
+			productName = AVCompositionDebugViewer;
+			productReference = 6003F58A195388D20070C39A /* AVCompositionDebugVieweriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E857228E230C3ED000A6ACDD /* AVCompositionDebugViewerMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E857229F230C3ED100A6ACDD /* Build configuration list for PBXNativeTarget "AVCompositionDebugViewerMac" */;
+			buildPhases = (
+				849945895E52BFD39D14A902 /* [CP] Check Pods Manifest.lock */,
+				E857228B230C3ED000A6ACDD /* Sources */,
+				E857228C230C3ED000A6ACDD /* Frameworks */,
+				E857228D230C3ED000A6ACDD /* Resources */,
+				697F3C0A5FC0708D70DEF89C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVCompositionDebugViewerMac;
+			productName = AVCompositionDebugViewerMac;
+			productReference = E857228F230C3ED000A6ACDD /* AVCompositionDebugViewerMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = APL;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Jonathan Lott";
+				TargetAttributes = {
+					E857228E230C3ED000A6ACDD = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "AVCompositionDebugViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* AVCompositionDebugVieweriOS */,
+				E857228E230C3ED000A6ACDD /* AVCompositionDebugViewerMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85B7064230C464100413E66 /* Main.storyboard in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				E85722B0230C406800A6ACDD /* SharedResources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E857228D230C3ED000A6ACDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8572295230C3ED100A6ACDD /* Assets.xcassets in Resources */,
+				E8572298230C3ED100A6ACDD /* MainMenu.xib in Resources */,
+				E85722B1230C406800A6ACDD /* SharedResources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		697F3C0A5FC0708D70DEF89C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVCompositionDebugViewerMac/Pods-AVCompositionDebugViewerMac-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVCompositionDebugViewer-macOS/AVCompositionDebugViewer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVCompositionDebugViewer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVCompositionDebugViewerMac/Pods-AVCompositionDebugViewerMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		849945895E52BFD39D14A902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVCompositionDebugViewerMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6621CA18D0CBA0DB0F0783F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVCompositionDebugVieweriOS/Pods-AVCompositionDebugVieweriOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVCompositionDebugViewer-iOS/AVCompositionDebugViewer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVCompositionDebugViewer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVCompositionDebugVieweriOS/Pods-AVCompositionDebugVieweriOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C101A87259F500A8FB03E00F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVCompositionDebugVieweriOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* APLAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* APLViewController.m in Sources */,
+				E85B7061230C459900413E66 /* APLSimpleEditor.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E857228B230C3ED000A6ACDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E857229B230C3ED100A6ACDD /* main.m in Sources */,
+				E85722A4230C3F4D00A6ACDD /* APLSimpleEditor.m in Sources */,
+				E8572293230C3ED000A6ACDD /* APLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8572296230C3ED100A6ACDD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8572297230C3ED100A6ACDD /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FF7564EDE15D7B16243EEF /* Pods-AVCompositionDebugVieweriOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCompositionDebugVieweriOS/AVCompositionDebugVieweriOS-Prefix.pch";
+				INFOPLIST_FILE = "AVCompositionDebugVieweriOS/AVCompositionDebugVieweriOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.AVCompositionDebugVieweriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C786A7A1C15B4C01F17E892E /* Pods-AVCompositionDebugVieweriOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVCompositionDebugVieweriOS/AVCompositionDebugVieweriOS-Prefix.pch";
+				INFOPLIST_FILE = "AVCompositionDebugVieweriOS/AVCompositionDebugVieweriOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.AVCompositionDebugVieweriOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E857229D230C3ED100A6ACDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABEB5F04106CB697EBC1863 /* Pods-AVCompositionDebugViewerMac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = AVCompositionDebugViewerMac/AVCompositionDebugViewerMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = AVCompositionDebugViewerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.AVCompositionDebugViewerMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E857229E230C3ED100A6ACDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4546AF363365FED4F23E6D /* Pods-AVCompositionDebugViewerMac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = AVCompositionDebugViewerMac/AVCompositionDebugViewerMac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = AVCompositionDebugViewerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.AVCompositionDebugViewerMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "AVCompositionDebugViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "AVCompositionDebugVieweriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E857229F230C3ED100A6ACDD /* Build configuration list for PBXNativeTarget "AVCompositionDebugViewerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E857229D230C3ED100A6ACDD /* Debug */,
+				E857229E230C3ED100A6ACDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

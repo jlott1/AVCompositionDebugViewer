@@ -1,0 +1,16 @@
+PODS:
+  - AVCompositionDebugViewer (0.1.0)
+
+DEPENDENCIES:
+  - AVCompositionDebugViewer (from `../`)
+
+EXTERNAL SOURCES:
+  AVCompositionDebugViewer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AVCompositionDebugViewer: ccd0a04517c424b88f05b27b0b84395ba3877aa4
+
+PODFILE CHECKSUM: 1504bc698531b9c8436c37281949d59819fe0ed3
+
+COCOAPODS: 1.7.0

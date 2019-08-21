@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APLCompositionViewController">
+            <connections>
+                <outlet property="compositionDebugView" destination="EZH-Et-7Q3" id="FVR-GE-0Gc"/>
+                <outlet property="currentTimeLabel" destination="7eV-B4-034" id="hKh-1K-3Tv"/>
+                <outlet property="playPauseButton" destination="IHv-DO-vEs" id="uJo-G0-mN3"/>
+                <outlet property="playerView" destination="Nsr-xG-kif" id="hai-KS-B8G"/>
+                <outlet property="scrubber" destination="XQ0-dr-c5Z" id="ItF-aV-PIX"/>
+                <outlet property="toolbar" destination="Jhz-Zt-qiv" id="C7v-rL-vc5"/>
+                <outlet property="view" destination="Aly-Wa-8RP" id="vF1-7O-L6r"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Aly-Wa-8RP">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-xG-kif" userLabel="Player View" customClass="APLPlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="Jhz-Zt-qiv">
+                            <rect key="frame" x="0.0" y="289.5" width="375" height="44"/>
+                            <items>
+                                <barButtonItem width="40" style="plain" systemItem="play" id="IHv-DO-vEs">
+                                    <connections>
+                                        <action selector="togglePlayPause:" destination="-1" id="GNz-js-8sR"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XQ0-dr-c5Z">
+                            <rect key="frame" x="43" y="296.5" width="284" height="31"/>
+                            <connections>
+                                <action selector="beginScrubbing:" destination="-1" eventType="touchDown" id="7JT-XA-4rk"/>
+                                <action selector="endScrubbing:" destination="-1" eventType="touchUpOutside" id="3SY-kE-OyN"/>
+                                <action selector="endScrubbing:" destination="-1" eventType="touchUpInside" id="Ide-fX-oB5"/>
+                                <action selector="endScrubbing:" destination="-1" eventType="touchCancel" id="hal-PO-6hW"/>
+                                <action selector="scrub:" destination="-1" eventType="valueChanged" id="mZt-PQ-AAa"/>
+                            </connections>
+                        </slider>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eV-B4-034">
+                            <rect key="frame" x="323" y="515" width="52" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="ssP-FB-uRC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7eV-B4-034" secondAttribute="trailing" id="5ig-kI-S64"/>
+                        <constraint firstItem="Jhz-Zt-qiv" firstAttribute="leading" secondItem="Nsr-xG-kif" secondAttribute="leading" id="ISd-Gm-4JX"/>
+                        <constraint firstItem="XQ0-dr-c5Z" firstAttribute="centerY" secondItem="Jhz-Zt-qiv" secondAttribute="centerY" id="OFv-2m-Qto"/>
+                        <constraint firstAttribute="trailing" secondItem="Jhz-Zt-qiv" secondAttribute="trailing" id="R8u-oF-p9T"/>
+                        <constraint firstAttribute="trailing" secondItem="XQ0-dr-c5Z" secondAttribute="trailing" constant="50" id="Sfl-QT-kLl"/>
+                        <constraint firstItem="Jhz-Zt-qiv" firstAttribute="bottom" secondItem="Nsr-xG-kif" secondAttribute="bottom" id="XqK-V0-RXn"/>
+                        <constraint firstItem="7eV-B4-034" firstAttribute="trailing" secondItem="Jhz-Zt-qiv" secondAttribute="trailing" id="k4E-Su-50A"/>
+                        <constraint firstItem="XQ0-dr-c5Z" firstAttribute="leading" secondItem="Nsr-xG-kif" secondAttribute="leading" constant="45" id="sZ4-Sk-QZQ"/>
+                        <constraint firstItem="7eV-B4-034" firstAttribute="top" secondItem="Nsr-xG-kif" secondAttribute="top" constant="515" id="vGv-MF-CPi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-Et-7Q3" userLabel="Composition Debug View" customClass="APLCompositionDebugView">
+                    <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                    <color key="backgroundColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nsr-xG-kif" firstAttribute="top" secondItem="Aly-Wa-8RP" secondAttribute="top" id="S25-yd-6EN"/>
+                <constraint firstItem="EZH-Et-7Q3" firstAttribute="top" secondItem="Nsr-xG-kif" secondAttribute="bottom" id="aTd-DJ-6u0"/>
+                <constraint firstItem="EZH-Et-7Q3" firstAttribute="trailing" secondItem="Aly-Wa-8RP" secondAttribute="trailing" id="qLG-OJ-fo8"/>
+                <constraint firstItem="EZH-Et-7Q3" firstAttribute="leading" secondItem="Aly-Wa-8RP" secondAttribute="leading" id="teM-h0-DnA"/>
+                <constraint firstItem="Nsr-xG-kif" firstAttribute="trailing" secondItem="Aly-Wa-8RP" secondAttribute="trailing" id="u6j-wH-6on"/>
+                <constraint firstItem="EZH-Et-7Q3" firstAttribute="bottom" secondItem="Aly-Wa-8RP" secondAttribute="bottom" id="uDw-Oz-yCa"/>
+                <constraint firstItem="Nsr-xG-kif" firstAttribute="leading" secondItem="Aly-Wa-8RP" secondAttribute="leading" id="uUU-zs-Gpf"/>
+                <constraint firstItem="Nsr-xG-kif" firstAttribute="height" secondItem="Aly-Wa-8RP" secondAttribute="height" multiplier="0.5" id="vnE-gj-hiu"/>
+                <constraint firstItem="EZH-Et-7Q3" firstAttribute="height" secondItem="Aly-Wa-8RP" secondAttribute="height" multiplier="0.45" priority="999" id="xfN-pK-Gcm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Yz6-7G-PbQ"/>
+            <point key="canvasLocation" x="39.130434782608695" y="45.600000000000001"/>
+        </view>
+    </objects>
+</document>
