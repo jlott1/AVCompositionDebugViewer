@@ -20,11 +20,9 @@ Pod::Spec.new do |s|
   s.description      = 'AVFoundation and AVComposition debugging viewer. Borrowed from Apple sample project and converted to cocoapod.  Allows you to create a custom AVMutableComposition and visualize it in the debugger view'
 
   s.homepage         = 'https://github.com/jlott1/AVCompositionDebugViewer'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors           = 'Jonathan Lott and Apple Inc.'
   s.source           = { :git => 'https://github.com/jlott1/AVCompositionDebugViewer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
@@ -33,15 +31,4 @@ Pod::Spec.new do |s|
   
   s.ios.resources = ['AVCompositionDebugViewer/Assets/iOS/*.xib']
   s.osx.resources = ['AVCompositionDebugViewer/Assets/Mac/*.xib']
-
-  #s.ios.resource_bundles = {
-  #  'AVCompositionDebugViewer' => ['AVCompositionDebugViewer/Assets/iOS/*.xib']
-  #}
-  #s.osx.resource_bundles = {
-  #    'AVCompositionDebugViewer' => ['AVCompositionDebugViewer/Assets/Mac/*.xib']
-  #}
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
