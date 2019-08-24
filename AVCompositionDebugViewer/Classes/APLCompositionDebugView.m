@@ -237,7 +237,6 @@ enum { kBannerHeight = 20, kIdealRowHeight = 40, kGapAfterRows = 4 };
 - (void)willMoveToSuperview:(NSView *)newSuperview
 {
     drawingLayer.frame = self.bounds;
-    drawingLayer.delegate = self;
     [drawingLayer setNeedsDisplay];
 }
 
