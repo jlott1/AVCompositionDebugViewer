@@ -111,6 +111,7 @@ static NSString* const AVCDVPlayerViewControllerRateObservationContext = @"AVCDV
     [self updateScrubber];
     [self updateTimeLabel];
 #endif
+    self.title = @"AVCompositionDebugViewer";
     [self synchronize];
 }
 #if !TARGET_OS_OSX
@@ -150,6 +151,7 @@ static NSString* const AVCDVPlayerViewControllerRateObservationContext = @"AVCDV
     [self.compositionDebugView synchronizeToComposition:self.composition videoComposition:self.videoComposition audioMix:self.audioMix];
 #if TARGET_OS_OSX
     [self.compositionDebugView needsDisplay];
+    [self.compositionDebugView setNeedsUpdateConstraints:YES];
 #else
     [self.compositionDebugView setNeedsDisplay];
 #endif
@@ -216,6 +218,7 @@ static NSString* const AVCDVPlayerViewControllerRateObservationContext = @"AVCDV
     [self.compositionDebugView synchronizeToComposition:self.composition videoComposition:self.videoComposition audioMix:self.audioMix];
 #if TARGET_OS_OSX
     [self.compositionDebugView needsDisplay];
+    [self.compositionDebugView setNeedsUpdateConstraints:YES];
 #else
     [self.compositionDebugView setNeedsDisplay];
 #endif

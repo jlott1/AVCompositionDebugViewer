@@ -9,7 +9,7 @@
 @import AVFoundation;
 
 #if TARGET_OS_OSX
-@import Cocoa;
+@import AppKit;
 #else
 @import UIKit;
 #endif

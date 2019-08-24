@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="14460.31"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSViewController">
+        <customObject id="-2" userLabel="File's Owner" customClass="APLCompositionViewController">
             <connections>
-                <outlet property="compositionDebugView" destination="Xkj-JD-nW7" id="eMg-Uf-jUC"/>
+                <outlet property="compositionDebugView" destination="vAy-M3-fGl" id="ZsA-Y0-lyO"/>
                 <outlet property="playerView" destination="44c-9g-2hW" id="Y5I-SU-7jZ"/>
                 <outlet property="view" destination="Mxi-Ds-BgW" id="j6f-Rg-adz"/>
             </connections>
@@ -16,26 +17,77 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view id="Mxi-Ds-BgW">
-            <rect key="frame" x="0.0" y="0.0" width="975" height="659"/>
+            <rect key="frame" x="0.0" y="0.0" width="975" height="806"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <avPlayerView translatesAutoresizingMaskIntoConstraints="NO" id="44c-9g-2hW" customClass="APLPlayerView">
-                    <rect key="frame" x="0.0" y="236" width="975" height="423"/>
-                </avPlayerView>
-                <view horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-JD-nW7" customClass="APLCompositionDebugView">
-                    <rect key="frame" x="0.0" y="0.0" width="975" height="236"/>
-                </view>
+                <splitView dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="HOc-B1-YkM">
+                    <rect key="frame" x="0.0" y="0.0" width="975" height="806"/>
+                    <subviews>
+                        <avPlayerView fixedFrame="YES" id="44c-9g-2hW" customClass="APLPlayerView">
+                            <rect key="frame" x="0.0" y="0.0" width="975" height="683"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </avPlayerView>
+                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="vi3-93-fb1">
+                            <rect key="frame" x="0.0" y="684" width="975" height="122"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <clipView key="contentView" id="cmM-1L-Tfu" customClass="FlippedView">
+                                <rect key="frame" x="1" y="1" width="958" height="105"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view translatesAutoresizingMaskIntoConstraints="NO" id="J6H-bc-J7j">
+                                        <rect key="frame" x="0.0" y="0.0" width="943" height="90"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="vAy-M3-fGl" customClass="APLCompositionDebugView">
+                                                <rect key="frame" x="0.0" y="0.0" width="943" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="500" constant="90" id="2pW-SC-VDX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="heightConstraint" destination="2pW-SC-VDX" id="6Ay-ob-7MY"/>
+                                                </connections>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vAy-M3-fGl" secondAttribute="bottom" priority="510" id="GUI-48-meS"/>
+                                            <constraint firstAttribute="trailing" secondItem="vAy-M3-fGl" secondAttribute="trailing" id="cZF-AF-BQn"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="vAy-M3-fGl" secondAttribute="bottom" priority="490" id="emB-UJ-BLK"/>
+                                            <constraint firstItem="vAy-M3-fGl" firstAttribute="leading" secondItem="J6H-bc-J7j" secondAttribute="leading" id="nDl-sh-Z6N"/>
+                                            <constraint firstItem="vAy-M3-fGl" firstAttribute="top" secondItem="J6H-bc-J7j" secondAttribute="top" id="rSu-2f-GLG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J6H-bc-J7j" firstAttribute="top" secondItem="cmM-1L-Tfu" secondAttribute="top" constant="15" id="6dr-vB-7U1"/>
+                                    <constraint firstAttribute="trailing" secondItem="J6H-bc-J7j" secondAttribute="trailing" constant="15" id="AWD-Mg-63q"/>
+                                    <constraint firstItem="J6H-bc-J7j" firstAttribute="leading" secondItem="cmM-1L-Tfu" secondAttribute="leading" id="KHa-Ri-qp0"/>
+                                </constraints>
+                            </clipView>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="450" id="gxV-LT-d9a"/>
+                            </constraints>
+                            <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="5by-5Y-6PX">
+                                <rect key="frame" x="1" y="106" width="958" height="15"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Bxg-bs-fN1">
+                                <rect key="frame" x="959" y="1" width="15" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="280"/>
+                    </holdingPriorities>
+                </splitView>
             </subviews>
             <constraints>
-                <constraint firstItem="Xkj-JD-nW7" firstAttribute="top" secondItem="44c-9g-2hW" secondAttribute="bottom" id="8YM-FB-Qcl"/>
-                <constraint firstItem="Xkj-JD-nW7" firstAttribute="leading" secondItem="Mxi-Ds-BgW" secondAttribute="leading" id="Jnz-OX-qJ0"/>
-                <constraint firstItem="44c-9g-2hW" firstAttribute="top" secondItem="Mxi-Ds-BgW" secondAttribute="top" id="Ytf-l5-orx"/>
-                <constraint firstItem="Xkj-JD-nW7" firstAttribute="top" secondItem="Mxi-Ds-BgW" secondAttribute="top" priority="999" constant="423" id="ZhT-ch-Pjg"/>
-                <constraint firstItem="Xkj-JD-nW7" firstAttribute="trailing" secondItem="Mxi-Ds-BgW" secondAttribute="trailing" id="clO-74-Z9S"/>
-                <constraint firstItem="44c-9g-2hW" firstAttribute="leading" secondItem="Mxi-Ds-BgW" secondAttribute="leading" id="jee-nr-2On"/>
-                <constraint firstItem="Xkj-JD-nW7" firstAttribute="bottom" secondItem="Mxi-Ds-BgW" secondAttribute="bottom" id="kLu-Wu-gUs"/>
-                <constraint firstAttribute="trailing" secondItem="44c-9g-2hW" secondAttribute="trailing" id="oak-RT-meY"/>
+                <constraint firstAttribute="bottom" secondItem="HOc-B1-YkM" secondAttribute="bottom" id="AwS-zE-fQT"/>
+                <constraint firstItem="HOc-B1-YkM" firstAttribute="top" secondItem="Mxi-Ds-BgW" secondAttribute="top" id="E82-xN-DFv"/>
+                <constraint firstItem="HOc-B1-YkM" firstAttribute="leading" secondItem="Mxi-Ds-BgW" secondAttribute="leading" id="bE2-xQ-OGz"/>
+                <constraint firstAttribute="trailing" secondItem="HOc-B1-YkM" secondAttribute="trailing" id="o0P-t0-gCH"/>
             </constraints>
+            <point key="canvasLocation" x="66.5" y="228"/>
         </view>
     </objects>
 </document>

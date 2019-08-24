@@ -9,7 +9,7 @@
 
 #if TARGET_OS_OSX
 enum { kLeftInsetToMatchTimeSlider = 70, kRightInsetToMatchTimeSlider = 35, kLeftMarginInset = 4};
-enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
+enum { kBannerHeight = 20, kIdealRowHeight = 40, kGapAfterRows = 4 };
 
 @interface APLCompositionTrackSegmentInfo : NSObject
 {
@@ -22,6 +22,16 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
 }
 @end
 
+@interface FlippedView : NSClipView
+@end
+
+@implementation FlippedView
+
+- (BOOL)isFlipped {
+    return NO;
+}
+
+@end
 @implementation APLCompositionTrackSegmentInfo
 
 - (void)dealloc
@@ -56,6 +66,7 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
     CAShapeLayer *timeMarkerWhiteLineLayer;
     CAShapeLayer *timeMarkerRedBandLayer;
 }
+@property (strong) IBOutlet NSLayoutConstraint *heightConstraint;
 @end
 
 @implementation APLCompositionDebugView
@@ -79,6 +90,10 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
 - (void)dealloc
 {
     drawingLayer = nil;
+}
+
+- (void)updateConstraints {
+    [super updateConstraints];
 }
 
 #pragma mark Value harvesting
@@ -111,6 +126,25 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
                         [description appendString:@"(a)"];
                     else
                         [description appendFormat:@"('%@')", segment->mediaType];
+                    
+                    if(videoComposition.instructions.count > 0) {
+                        long ciCount = 0;
+                        long liCount = 0;
+                        for(AVVideoCompositionInstruction* instruction in videoComposition.instructions) {
+                            for(AVVideoCompositionLayerInstruction* layerInstruction in instruction.layerInstructions) {
+                                if([layerInstruction trackID] == t.trackID) {
+                                    ciCount++;
+                                    liCount++;
+                                }
+                            }
+                        }
+                        if(ciCount) {
+                            [description appendFormat:@"ci: %ld", ciCount];
+                        }
+                        if(liCount) {
+                            [description appendFormat:@"li: %ld", liCount];
+                        }
+                    }
                     segment->description = description;
                 }
                 [segments addObject:segment];
@@ -185,6 +219,15 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
     }
     
     
+    int numBanners = (compositionTracks != nil) + (audioMixTracks != nil) + (videoCompositionStages != nil);
+    int numRows = (int)[compositionTracks count] + (int)[audioMixTracks count] + (videoCompositionStages != nil);
+    
+    CGFloat totalBannerHeight = numBanners * (kBannerHeight + kGapAfterRows);
+    CGFloat totalHeight = totalBannerHeight + (numRows * (kIdealRowHeight + kGapAfterRows));
+    self.translatesAutoresizingMaskIntoConstraints = FALSE;
+    [self.heightConstraint setConstant:MAX(totalHeight, self.bounds.size.height)];
+    [self setNeedsUpdateConstraints:YES];
+    [self setNeedsDisplay:YES];
     
     [drawingLayer setNeedsDisplay];
 }
@@ -206,7 +249,7 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
 - (void)drawRect:(NSRect)rect
 {
     CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
-    rect = CGRectInset(rect, kLeftMarginInset, 4.0);
+    rect = CGRectInset(self.bounds, kLeftMarginInset, 4.0);
     
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setAlignment:NSCenterTextAlignment];
@@ -251,7 +294,7 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
                 segmentRect.size.width = CMTimeGetSeconds(segment->timeRange.duration) * scaledDurationToWidth;
                 
                 if (segment->empty) {
-                    CGContextSetRGBFillColor(context, 0.00, 0.00, 0.00, 1.00); // white
+                    CGContextSetRGBFillColor(context, 1.00, 1.00, 1.00, 0.3); // white
                     [[NSString stringWithFormat:@"empty"] drawInRect:segmentRect withAttributes:textAttributes];
                 }
                 else {
@@ -268,7 +311,11 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
                     CGContextDrawPath(context, kCGPathFillStroke);
                     
                     CGContextSetRGBFillColor(context, 0.00, 0.00, 0.00, 1.00); // white
-                    [[NSString stringWithFormat:@"%@", segment->description] drawInRect:segmentRect withAttributes:textAttributes];
+                    NSString* description = [NSString stringWithFormat:@"%@", segment->description];
+                    CGRect textRect = [description boundingRectWithSize:CGSizeMake(segmentRect.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:textAttributes];
+                    textRect.origin.x = segmentRect.origin.x;
+                    textRect.origin.y = segmentRect.origin.y;
+                    [description drawInRect:segmentRect withAttributes:textAttributes];
                 }
                 
                 segmentRect.origin.x += segmentRect.size.width;
@@ -293,8 +340,8 @@ enum { kBannerHeight = 20, kIdealRowHeight = 36, kGapAfterRows = 4 };
             
             CGFloat layerCount = [stage->layerNames count];
             CGRect layerRect = stageRect;
-            if (layerCount > 0)
-                layerRect.size.height /= layerCount;
+//            if (layerCount > 0)
+//                layerRect.size.height /= layerCount;
             
             if (layerCount > 1)
                 layerRect.origin.y += layerRect.size.height;
